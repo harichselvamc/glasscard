@@ -1,0 +1,70 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: whitesmoke;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  background-image: url("background.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  height: 180px;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 15px;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+.card::before{
+    content: "";
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.797);
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: skew(-20deg)translateX(400%);
+    transition: .5s;
+}
+.card:hover::before{
+    transform: skew(-20deg)translateX(-130%);
+
+}
+.bankname {
+  text-align: end;
+}
+
+.chip {
+  width: 58px;
+  position: relative;
+}
+.number {
+  position: relative;
+  top: -9px;
+  left: 5px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+.visa{
+    width: 50px;
+}
+
+.owner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: -30PX;
+    left: 5px;
+    font-size: 19px;
+}
